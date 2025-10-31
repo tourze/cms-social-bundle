@@ -1,0 +1,15 @@
+services:
+  # default configuration for services in *this* file
+  _defaults:
+    autowire: true      # Automatically injects dependencies in your services.
+    autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+  Tourze\CmsSocialBundle\Procedure\:
+    resource: '../../Procedure/'
+  Tourze\CmsSocialBundle\Repository\:
+    resource: '../../Repository/'
+  Tourze\CmsSocialBundle\Controller\:
+    resource: '../../Controller/'
+    tags: ['controller.service_arguments']
+  Tourze\CmsSocialBundle\Service\:
+    resource: '../../Service/'
